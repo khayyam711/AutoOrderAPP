@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BazarStore\**" />
+    <Compile Remove="Makret\**" />
+    <EmbeddedResource Remove="BazarStore\**" />
+    <EmbeddedResource Remove="Makret\**" />
+    <None Remove="BazarStore\**" />
+    <None Remove="Makret\**" />
+    <Page Remove="BazarStore\**" />
+    <Page Remove="Makret\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Scripting">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>420b2830-e718-11cf-893d-00a0c9054228</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="UIA">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>930299ce-9965-4dec-b0f4-a54848d4b667</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VisioAddin_PHLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>c68debb6-07af-4bdd-8fcb-0e4624076214</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="{ea544a21-c82d-11d1-a3e4-00a0c90aea82}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>6</VersionMajor>
+      <Guid>ea544a21-c82d-11d1-a3e4-00a0c90aea82</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Email" Version="21.9.0" />
+    <PackageReference Include="Aspose.PDF" Version="21.9.0" />
+    <PackageReference Include="ChilkatNativeLib" Version="9.5.0.88" />
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="Mail.dll" Version="3.0.21231.1234" />
+    <PackageReference Include="MailKit" Version="2.15.0" />
+    <PackageReference Include="Microsoft.Office.Interop.Excel" Version="12.0.4518.1014" />
+    <PackageReference Include="NPoco" Version="5.3.1" />
+    <PackageReference Include="Office" Version="12.0.0" />
+  </ItemGroup>
+
+</Project>
